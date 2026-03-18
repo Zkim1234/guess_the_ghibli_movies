@@ -43,6 +43,7 @@ body {
 .hero-content {
   display: flex;
   width: 100%;
+  height: 20rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -93,6 +94,21 @@ body {
 .start-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.05);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.line-left,
+.line-right {
+  height: 15px;
+  width: auto;
 }
 
 .levels-container {
