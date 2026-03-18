@@ -1,6 +1,21 @@
 /*CSS Styles*/
 @import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
 
+:root {
+  /* Glass texture variables */
+  --glass-bg-gradient: linear-gradient(
+    to right,
+    rgba(39, 67, 124, 0) 0%,
+    rgba(39, 67, 124, 0.5) 20%,
+    rgba(39, 67, 124, 0.5) 80%,
+    rgba(39, 67, 124, 0) 100%
+  );
+  --glass-backdrop: blur(4px) brightness(1.1) saturate(0.5);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+  --glass-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.37), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
 body {
   font-family: "Zen Antique Soft", serif;
   text-align: center;
@@ -18,16 +33,8 @@ body {
 }
 
 .hero-container {
-  background: linear-gradient(
-    to right,
-    rgba(39, 67, 124, 0) 0%,
-    rgba(39, 67, 124, 0.5) 20%,
-    rgba(39, 67, 124, 0.5) 80%,
-    rgba(39, 67, 124, 0) 100%
-  );
   padding: 60px 40px;
-  border-radius: 10px;
-  margin-bottom: 40px;
+  margin: 40px 60px;
   width: 100%;
 }
 
@@ -36,6 +43,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: var(--glass-bg-gradient);
+  backdrop-filter: var(--glass-backdrop);
+  border: var(--glass-border);
+  padding: 40px 60px;
+  box-shadow: var(--glass-shadow);
 }
 
 .game-name {
@@ -56,23 +68,25 @@ body {
 }
 
 .start-button {
-  background-color: #27437c;
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
   padding: 15px 40px;
   font-size: 18px;
   text-decoration: none;
   border-radius: 50px;
+  backdrop-filter: var(--glass-backdrop);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
   transition:
     background-color 0.3s ease,
     transform 0.2s ease;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
-  box-shadow: 0 4px 15px rgba(39, 67, 124, 0.4);
 }
 
 .start-button:hover {
-  background-color: #1a2a50;
+  background-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.05);
 }
 
