@@ -49,14 +49,18 @@ body {
   justify-content: center;
   background: var(--glass-bg-gradient);
   backdrop-filter: var(--glass-backdrop);
-  border: var(--glass-border);
   padding: 20px 40px;
   box-shadow: var(--glass-shadow);
   box-sizing: border-box;
 }
 
+.hero-banner {
+  width: 100%;
+  height: 2rem;
+}
+
 .game-name {
-  font-size: 25px;
+  font-size: 1.5rem;
   color: white;
   margin: 0 0 10px 0;
   font-weight: bold;
@@ -64,7 +68,7 @@ body {
 }
 
 .hero-title {
-  font-size: 56px;
+  font-size: 3.5rem;
   color: white;
   margin: 0;
   font-weight: bold;
@@ -74,9 +78,7 @@ body {
 
 .start-button {
   background-color: rgba(255, 255, 255, 0.1);
-  color: white;
   padding: 12px 30px;
-  font-size: 16px;
   text-decoration: none;
   border-radius: 50px;
   backdrop-filter: var(--glass-backdrop);
@@ -86,7 +88,9 @@ body {
     background-color 0.3s ease,
     transform 0.2s ease;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -94,6 +98,18 @@ body {
 .start-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.05);
+}
+
+.start-text {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+}
+
+.game-icon {
+  height: 24px;
+  width: 24px;
 }
 
 .button-container {
@@ -107,7 +123,7 @@ body {
 
 .line-left,
 .line-right {
-  height: 15px;
+  height: 1rem;
   width: auto;
 }
 
@@ -121,7 +137,7 @@ body {
 }
 
 .levels-title {
-  font-size: 48px;
+  font-size: 3.5rem;
   color: white;
   margin: 0 0 50px 0;
   font-weight: bold;
@@ -155,13 +171,13 @@ body {
 }
 
 .level-number {
-  font-size: 60px;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .level-difficulty {
-  font-size: 16px;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -188,7 +204,7 @@ body {
   background-color: rgba(39, 67, 124, 0.7);
   color: white;
   padding: 12px 30px;
-  font-size: 16px;
+  font-size: 1.25rem;
   text-decoration: none;
   border-radius: 50px;
   transition: background-color 0.3s ease;
