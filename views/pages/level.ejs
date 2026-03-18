@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Level <%= level %></title>
-</head>
-<body>
+  <head>
+    <title>Select Level - Guess The Ghibli Movie</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="levels-container">
+      <h1 class="levels-title">Select Your Level</h1>
 
-<h2>Level <%= level %></h2>
-<p>Game content coming soon...</p>
+      <div class="levels-buttons">
+        <a href="/level/1" class="level-button level-1">
+          <span class="level-number">1</span>
+          <span class="level-difficulty">Guess the Title</span>
+        </a>
 
-<a href="/">Back Home</a>
+        <a href="/level/2" class="level-button level-2">
+          <span class="level-number">2</span>
+          <span class="level-difficulty">Medium</span>
+        </a>
 
-</body>
+        <a href="/level/3" class="level-button level-3">
+          <span class="level-number">3</span>
+          <span class="level-difficulty">Hard</span>
+        </a>
+      </div>
+
+      <a href="/" class="back-button">Back</a>
+    </div>
+  </body>
 </html>
