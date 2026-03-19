@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Level <%= level %></title>
-</head>
-<body>
+  <head>
+    <title>Select Level - Guess The Ghibli Movie</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="levels-page">
+    <div class="levels-container">
+      <div class="levels-header">
+        <h2 class="level-game-name">GuessGhibli</h2>
+        <h1 class="levels-title">Select Your Level</h1>
+      </div>
 
-<h2>Level <%= level %></h2>
-<p>Game content coming soon...</p>
+      <div class="levels-buttons">
+        <div class="level-card">
+          <img
+            src="/images/level01-image.jpg"
+            alt="Level 1 preview"
+            class="level-image-placeholder"
+          />
+          <h3 class="level-title">Level 1 - Guess the Film Title</h3>
+          <p class="level-subheading">
+            Identify the exact Studio Ghibli movie from a single iconic still
+            image or scene snippet.
+          </p>
+          <img
+            src="/images/icons/blue-line.svg"
+            alt="Blue line"
+            class="level-blue-line"
+          />
+          <a href="/level/1" class="level-start-button">Start</a>
+        </div>
 
-<a href="/">Back Home</a>
+        <div class="level-card">
+          <img
+            src="/images/level02-image.jpg"
+            alt="Level 2 preview"
+            class="level-image-placeholder"
+          />
+          <h3 class="level-title">
+            Level 2 - Guess the Film Title OR Release Year
+          </h3>
+          <p class="level-subheading">
+            Name the Studio Ghibli movie OR its release year from one iconic
+            image.
+          </p>
+          <img
+            src="/images/icons/blue-line.svg"
+            alt="Blue line"
+            class="level-blue-line"
+          />
+          <a href="/level/2" class="level-start-button">Start</a>
+        </div>
 
-</body>
+        <div class="level-card">
+          <img
+            src="/images/level03-image.jpg"
+            alt="Level 3 preview"
+            class="level-image-placeholder"
+          />
+          <h3 class="level-title">
+            Level 3 - Guess the Film Title AND Release Year
+          </h3>
+          <p class="level-subheading">
+            Test your knowledge of Studio Ghibli films with this challenging
+            mode.
+          </p>
+          <img
+            src="/images/icons/blue-line.svg"
+            alt="Blue line"
+            class="level-blue-line"
+          />
+          <a href="/level/3" class="level-start-button">Start</a>
+        </div>
+      </div>
+
+      <a href="/" class="back-button">Back</a>
+    </div>
+  </body>
 </html>
