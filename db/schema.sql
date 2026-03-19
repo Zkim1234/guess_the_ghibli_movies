@@ -25,3 +25,11 @@ CREATE TABLE scores (
   score INTEGER NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Optional table for multiple choice options
+CREATE TABLE movie_options (
+  id SERIAL PRIMARY KEY,
+  movie_id INTEGER REFERENCES movies(id) ON DELETE CASCADE,
+  option_text TEXT NOT NULL,
+  is_correct BOOLEAN DEFAULT FALSE
+);

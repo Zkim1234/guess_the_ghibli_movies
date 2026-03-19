@@ -1,3 +1,4 @@
+-- inserting movies and year
 INSERT INTO movies (title, release_year)
 VALUES
 ('Spirited Away', 2001),
@@ -18,6 +19,7 @@ VALUES
 ('Only Yesterday', 1991),
 ('Earwig and the Witch', 2020);
 
+-- Each stage has different images for same movies.
 INSERT INTO movie_images (movie_id, difficulty_level, image_url)
 VALUES
 (1, 1, '/images/ghibli-level01/10-spirited-away.jpg'),
@@ -36,6 +38,7 @@ VALUES
 (14, 1, '/images/ghibli-level01/15-the-wind-rises.jpg'),
 (15, 1, '/images/ghibli-level01/01-aya-and-the-witch-a-good.webp');
 
+-- Each stage has different images for same movies.
 INSERT INTO movie_images (movie_id, difficulty_level, image_url)
 VALUES
 (1, 2, '/images/ghibli-level02/10-spirited-away.png'),
@@ -54,6 +57,7 @@ VALUES
 (14, 2, '/images/ghibli-level02/15-the-wind-rises.jpg'),
 (15, 2, '/images/ghibli-level02/04-when-marine-was-there.jpg');
 
+-- Each stage has different images for same movies.
 INSERT INTO movie_images (movie_id, difficulty_level, image_url)
 VALUES
 (1, 3, '/images/ghibli-level03/10-spirited-away.jpg'),
@@ -71,3 +75,91 @@ VALUES
 (13, 3, '/images/ghibli-level03/03-pom-poko.jpg'),
 (14, 3, '/images/ghibli-level03/15-the-wind-rises.jpg'),
 (15, 3, '/images/ghibli-level03/04-when-marine-was-there.jpg');
+
+-- For multiple answer options
+INSERT INTO movie_options (movie_id, option_text, is_correct) VALUES
+
+-- 1 Spirited Away
+(1, 'Spirited Away', TRUE),
+(1, 'Spirited Too Far', FALSE),
+(1, 'Taken by Ghost Uber', FALSE),
+
+-- 2 Totoro
+(2, 'My Neighbor Totoro', TRUE),
+(2, 'My Roommate Totoro', FALSE),
+(2, 'Totoro Next Door HOA Issues', FALSE),
+
+-- 3 Howl
+(3, 'Howl''s Moving Castle', TRUE),
+(3, 'Howl''s Housing Crisis', FALSE),
+(3, 'Howl''s Airbnb Castle', FALSE),
+
+-- 4 Kiki
+(4, 'Kiki''s Delivery Service', TRUE),
+(4, 'Kiki''s DoorDash Service', FALSE),
+(4, 'Kiki''s Amazon Prime Delivery', FALSE),
+
+-- 5 Ponyo
+(5, 'Ponyo', TRUE),
+(5, 'Fish Girl Chaos', FALSE),
+(5, 'Ponyo and the Big Splash', FALSE),
+
+-- 6 Mononoke
+(6, 'Princess Mononoke', TRUE),
+(6, 'Princess of the Forest Drama', FALSE),
+(6, 'Wolf Girl vs Humans', FALSE),
+
+-- 7 Cat Returns
+(7, 'The Cat Returns', TRUE),
+(7, 'The Cat Won''t Leave', FALSE),
+(7, 'Return of the Cat King', FALSE),
+
+-- 8 Arrietty
+(8, 'Arrietty', TRUE),
+(8, 'Tiny Girl Big Problems', FALSE),
+(8, 'Borrower Chronicles', FALSE),
+
+-- 9 Poppy Hill
+(9, 'From Up on Poppy Hill', TRUE),
+(9, 'Up the Hill Vibes', FALSE),
+(9, 'Poppy Hill High School Drama', FALSE),
+
+-- 10 Whisper
+(10, 'Whisper of the Heart', TRUE),
+(10, 'Whisper but Louder', FALSE),
+(10, 'Heart Murmurs', FALSE),
+
+-- 11 Ocean Waves
+(11, 'Ocean Waves', TRUE),
+(11, 'Teen Drama by the Sea', FALSE),
+(11, 'Salty Feelings', FALSE),
+
+-- 12 Kaguya
+(12, 'The Tale of the Princess Kaguya', TRUE),
+(12, 'Moon Princess Problems', FALSE),
+(12, 'Bamboo Girl Saga', FALSE),
+
+-- 13 Pom Poko
+(13, 'Pom Poko', TRUE),
+(13, 'Raccoon Chaos Society', FALSE),
+(13, 'Tanuki Shenanigans', FALSE),
+
+-- 14 Wind Rises
+(14, 'The Wind Rises', TRUE),
+(14, 'Wind but Sad', FALSE),
+(14, 'Planes and Pain', FALSE),
+
+-- 15 Marnie
+(15, 'When Marnie Was There', TRUE),
+(15, 'Marnie Ghosted Me', FALSE),
+(15, 'The Mysterious Girl Next Door', FALSE),
+
+-- 16 Only Yesterday
+(16, 'Only Yesterday', TRUE),
+(16, 'Just Yesterday Honestly', FALSE),
+(16, 'Flashback Simulator', FALSE),
+
+-- 17 Earwig
+(17, 'Earwig and the Witch', TRUE),
+(17, 'The Witch Babysitter', FALSE),
+(17, 'Magic Child Chaos', FALSE);
