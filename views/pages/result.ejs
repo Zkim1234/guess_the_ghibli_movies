@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game Result - Guess The Ghibli Movie</title>
+    <link rel="icon" type="image/svg+xml" href="/images/icons/blue-icon.svg" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/result.css" />
+  </head>
+  <body class="result-page <%= isSuccess ? 'result-success' : 'result-fail' %>">
+    <main class="result-wrapper">
+      <section class="result-card">
+        <p class="result-kicker">Level <%= levelNum %> Completed</p>
+        <h1 class="result-heading">
+          <%= isSuccess ? 'Success!' : 'Unsuccessful' %>
+        </h1>
+
+        <p class="result-message">
+          <%= isSuccess ? 'Amazing! You really know your Ghibli films.' : 'Nice
+          try. One more round and you will do even better.' %>
+        </p>
+
+        <p class="result-score-text">
+          Your Score:
+          <span class="result-score-value"><%= score %>/<%= total %></span>
+        </p>
+
+        <div class="result-actions">
+          <a href="/" class="result-btn result-btn-secondary">Back to Home</a>
+          <a href="/game/<%= levelNum %>" class="result-btn result-btn-primary"
+            >Try Again</a
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

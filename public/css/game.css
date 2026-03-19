@@ -1,0 +1,379 @@
+/* Game Page Styles */
+
+.game-page {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  background-image: url("/images/landing-background01.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.game-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.game-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: transparent;
+  z-index: 20;
+  position: relative;
+}
+
+.game-level-title {
+  margin: 0;
+  text-align: center;
+  color: #27437c;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  position: relative;
+  z-index: 25;
+}
+
+.game-header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.game-back-button {
+  background-color: #27437c;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.game-back-button:hover {
+  background-color: #1a2a50;
+}
+
+.game-score {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  z-index: 25;
+  background-color: #27437c;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+}
+
+.score-label {
+  color: rgba(255, 255, 255, 0.85);
+  margin-right: 0.5rem;
+}
+
+.score-value {
+  color: white;
+}
+
+.game-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.game-timer {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background-color: rgba(39, 67, 124, 0.7);
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  min-width: 100px;
+  text-align: center;
+  position: relative;
+  z-index: 25;
+}
+
+.game-timer.warning {
+  color: #ff9800;
+}
+
+.game-timer.critical {
+  color: #f44336;
+}
+
+/* Game Container */
+.game-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.game-overlay {
+  display: none;
+}
+
+/* Image Section */
+.game-image-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: min(90vw, 52rem);
+  height: min(52vh, 32rem);
+}
+
+.game-image {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Choices Section */
+.game-choices-section {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.choices-container.level-one-choices {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.choice-button {
+  background-color: #27437c;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(39, 67, 124, 0.4);
+  text-align: center;
+  font-family: "Zen Antique Soft", serif;
+}
+
+.choices-container.level-one-choices .choice-button {
+  width: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.choice-button:hover {
+  background-color: #1a2a50;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(39, 67, 124, 0.6);
+}
+
+.choice-button:active {
+  transform: translateY(0);
+}
+
+.choice-button.selected {
+  background-color: #4caf50;
+}
+
+.choice-button.incorrect {
+  background-color: #f44336;
+}
+
+/* Text Input Section */
+.input-section {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  z-index: 2;
+  position: relative;
+}
+
+.game-text-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(39, 67, 124, 0.5);
+  border-radius: 50px;
+  font-family: "Zen Antique Soft", serif;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.game-text-input:focus {
+  outline: none;
+  border-color: #27437c;
+  box-shadow: 0 0 0 3px rgba(39, 67, 124, 0.2);
+}
+
+.game-input-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #27437c;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.two-input-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.game-submit-button {
+  background-color: #27437c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(39, 67, 124, 0.4);
+  font-family: "Zen Antique Soft", serif;
+  align-self: flex-end;
+}
+
+.two-input-row .game-submit-button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.game-submit-button:hover {
+  background-color: #1a2a50;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(39, 67, 124, 0.6);
+}
+
+.game-submit-button:active {
+  transform: translateY(0);
+}
+
+/* Result Animation */
+.result-animation {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate3d(110%, -50%, 0);
+  width: 100vw;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.result-animation.show {
+  animation: result-slide-banner 2.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes result-slide-banner {
+  0% {
+    transform: translate3d(110%, -50%, 0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  22% {
+    transform: translate3d(0, -50%, 0);
+    opacity: 1;
+  }
+  28% {
+    transform: translate3d(0, -50%, 0);
+    opacity: 1;
+  }
+  70% {
+    transform: translate3d(0, -50%, 0);
+    opacity: 1;
+  }
+  92% {
+    transform: translate3d(-100%, -50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-115%, -50%, 0);
+    opacity: 0;
+  }
+}
+
+.result-content {
+  text-align: center;
+  color: #27437c;
+}
+
+.result-text {
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  margin: 0 0 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  max-width: min(92vw, 70rem);
+  color: #27437c;
+}
+
+.result-score {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #27437c;
+  font-weight: 700;
+}

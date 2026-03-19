@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%
+      const levelTitles = {
+        1: "Level 1 - Guess the Film Title",
+        2: "Level 2 - Guess the Film Title OR Release Year",
+        3: "Level 3 - Guess the Film Title AND Release Year"
+      };
+      const currentLevelTitle = levelTitles[levelNum] || `Level ${levelNum}`;
+    %>
+    <title><%= currentLevelTitle %> - Guess The Ghibli Movie</title>
+    <link rel="icon" type="image/svg+xml" href="/images/icons/blue-icon.svg" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/game.css" />
+  </head>
+  <body class="game-page">
+    <div class="game-wrapper">
+      <!-- Header -->
+      <div class="game-header">
+        <div class="game-header-left">
+          <a href="/level" class="game-back-button">← Back</a>
+          <div class="game-score">
+            <span class="score-label">Score:</span>
+            <span class="score-value"><span id="currentScore">0</span>/5</span>
+          </div>
+        </div>
+        <div class="game-header-right">
+          <div class="game-timer"><span id="timerDisplay">30</span>s</div>
+        </div>
+      </div>
+
+      <h2 class="game-level-title"><%= currentLevelTitle %></h2>
+
+      <!-- Game Container -->
+      <div class="game-container">
+        <!-- Background Overlay -->
+        <div class="game-overlay"></div>
+
+        <!-- Image Section -->
+        <div class="game-image-section">
+          <img
+            id="gameImage"
+            src=""
+            alt="Level question image"
+            class="game-image"
+          />
+        </div>
+
+        <!-- Multiple Choice Section (Level 1) -->
+        <div class="game-choices-section">
+          <div id="choicesContainer" class="choices-container"></div>
+        </div>
+      </div>
+
+      <!-- Result Animation -->
+      <div id="resultAnimation" class="result-animation">
+        <div class="result-content">
+          <h2 id="resultText" class="result-text">Correct!</h2>
+          <p class="result-score">Score: <span id="resultScore">0</span>/5</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/game.js"></script>
+    <script>
+      const gameConfig = {
+        levelNum: <%= levelNum %>,
+        totalQuestions: 5,
+        timePerQuestion: 30
+      };
+    </script>
+  </body>
+</html>
