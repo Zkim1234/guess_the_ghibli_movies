@@ -15,8 +15,11 @@
         </h1>
 
         <p class="result-message">
-          <%= isSuccess ? 'Amazing! You really know your Ghibli films.' : 'Nice
-          try. One more round and you will do even better.' %>
+          <% if (isSuccess) { %>
+            Amazing! You really know your Ghibli films.
+          <% } else { %>
+            Nice try. One more round and you will do even better.
+          <% } %>
         </p>
 
         <p class="result-score-text">
