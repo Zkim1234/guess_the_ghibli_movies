@@ -1,3 +1,12 @@
+# Team Contribution
+## Zinna Kim 
+Collected Ghibli film images for each level, designed and built the front-end interface, and implemented the core game functionality, including guessing logic and user interaction.
+
+## Denise Aquino
+
+## Micaela Valmores
+
+
 # 🎮 Guess The Ghibli Movie
 
 ## 📖 Project Overview
